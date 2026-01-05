@@ -1,0 +1,52 @@
+/**
+ * GLOBAL STYLES
+ * 
+ * This file contains:
+ * 1. Tailwind CSS directives (required)
+ * 2. Custom CSS variables for theming
+ * 3. Base styles for consistent design
+ */
+
+/* Tailwind CSS - DO NOT REMOVE */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom CSS Variables - Customize for Stratum Security branding */
+:root {
+  --foreground-rgb: 15, 23, 42; /* slate-900 */
+  --background-rgb: 255, 255, 255;
+  
+  /* Security-themed accent colors */
+  --primary: 3, 105, 161; /* Sky blue for trust/security */
+  --secondary: 71, 85, 105; /* Slate gray for professionalism */
+  --success: 34, 197, 94; /* Green for compliant/secure */
+  --warning: 234, 179, 8; /* Yellow for warnings */
+  --danger: 239, 68, 68; /* Red for critical issues */
+}
+
+/* Dark mode support (optional - remove if not needed) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 248, 250, 252;
+    --background-rgb: 15, 23, 42;
+  }
+}
+
+/* Base styles */
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles for accessibility */
+*:focus-visible {
+  outline: 2px solid rgb(var(--primary));
+  outline-offset: 2px;
+}
