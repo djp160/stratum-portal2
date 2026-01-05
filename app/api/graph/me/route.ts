@@ -26,7 +26,7 @@ import { NextRequest, NextResponse } from "next/server"
 import { getServerSession } from "next-auth/next"
 import { authOptions } from "@/lib/auth"
 import { getUserProfile, getOrganization, getSecureScore } from "@/lib/graph"
-
+export const dynamic = 'force-dynamic'
 /**
  * GET /api/graph/me
  * 
